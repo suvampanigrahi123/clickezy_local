@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-3 rounded-2xl bg-blue-700 text-base font-medium text-center text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+  .formInput {
+    @apply flex justify-between items-center self-stretch flex-grow flex-shrink-0 
+    cursor-pointer h-12 px-4 rounded-lg bg-[#27292d] border-0 shadow-md
+    text-base font-medium text-left text-white placeholder-[#ffffff67] placeholder:font-normal
+    focus:outline-none focus:ring-1 focus:ring-blue-500
+     disabled:text-[#ffffff64] disabled:border-transparent disabled:shadow-none
+    invalid:border-pink-500 invalid:text-pink-600
+    focus:invalid:border-pink-500 focus:invalid:ring-pink-500;
+  }
+}
+@layer base{
+  html {
+    @apply font-inter;
+  }
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color:  #35373b;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #59525b;
+  border-radius: 10px;
+}
+
+
+.Typewriter {
+  display: inline;
+}
+.css-1u9des2-indicatorSeparator {
+  display: none;
+}
+input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.64;
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+}
+
+.range {
+  position: relative;
+  width: 360px;
+  height: 17px;
+}
+
+.range svg {
+  width: 100%;
+  height: 100%;
+}
+
+.range svg path {
+  transition: linear 0.5s;
+}
+
+.range input[type='range'] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+  background: none;
+  transition: linear 0.5s;
+}
+
+.range input[type='range']:focus {
+  outline: 0;
+}
+
+.range input[type='range']::-webkit-slider-thumb {
+  width: 26px;
+  -webkit-appearance: none;
+  height: 26px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #eab308;
+  background: #eab308;
+  z-index: 2;
+  position: relative;
+  margin-top: -3px;
+}
+
+/* PhotoSwipe Override */
+.pswp__bg {
+  background: #010201 !important;
+  opacity: 1 !important;
+}
+.pswp__top-bar {
+  opacity: 0 !important;
+}
+.pswp__zoom-wrap {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) !important;
+}
+.pswp__content {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+.pswp--touch .pswp__button--arrow {
+  visibility: visible !important;
+}
+/* Swiper  */
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-pagination-bullet-active{
+  background-color: #ffffff !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .swiper {
+    padding: 0 24px !important;
+  }
+ .studio_profile .swiper {
+    padding: 0  !important;
+  }
+  .banner > .swiper {
+    padding: 0 !important;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  height: calc((100% - 30px) / 2) !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-grid-column > .swiper-wrapper {
+  flex-direction: unset !important;
+}
+
+.productSlider{
+    height:100% !important;
+}
+
+/* Slider config */
+.photoSlide {
+  margin-top: 0px !important;
+  width: max-content !important;
+}
+
+.placeSlide {
+  margin-top: 0px !important;
+  width: 160px !important;
+}
+
+.studioSlice {
+  margin-top: 0px !important;
+  width: 96px !important;
+}
+.filterSlider{
+  width: auto !important;
+}
+.swiper-button-disabled{
+  display: none !important;
+}
+
+.imageSlice {
+  margin-top: 16px !important;
+  width: 288px !important;
+}
+
+/* Loader */
+.bouncing-loader {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bouncing-loader > .ball {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #1185e0;
+  margin: 0 6px 0 0;
+  animation: oscillate 0.7s ease-in forwards infinite;
+}
+
+.bouncing-loader > .one {
+  animation-delay: 0.5s;
+}
+
+.bouncing-loader > .two {
+  animation-delay: 1s;
+}
+
+.bouncing-loader > .three {
+  animation-delay: 2s;
+}
+
+@keyframes oscillate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.customDatePickerWidth,
+.customDatePickerWidth > div.react-datepicker-wrapper,
+.customDatePickerWidth
+  > div
+  > div.react-datepicker__input-container
+  .customDatePickerWidth
+  > div
+  > div.react-datepicker__input-container
+  input {
+  width: 100%;
+}
+
+
+/* ant design time picker */
+.ant-picker-input > input,
+.ant-picker-input > .ant-picker-suffix {
+  color: #ffffff !important;
+  height: 100%;
+}
+.ant-picker-input, .ant-picker-input > input{
+  width: 100%;
+  height: 100% !important;
+}
+.ant-picker-outlined:hover{
+  background-color: #27292d !important;
+}
+.ant-picker-suffix{
+  position: absolute;
+  right: 0;
+}
+.ant-picker-input > input::-webkit-input-placeholder {
+  color: #c9c6c6 !important;
+}
+.ant-picker-input > .ant-picker-clear {
+  color: #ff0000 !important;
+}
+.ant-picker-ranges>.ant-picker-ok{
+      width: 100%;
+}
+.ant-picker-ranges > .ant-picker-ok > button {
+  background-color: #1677ff;
+  color: white;
+  font-size: 14px !important;
+  font-weight: 500;
+  height: 30px;
+  border-radius: 5px;
+  width: 100%;
+}
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper {
+  width: auto !important;
+}
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper
+  .ant-upload.ant-upload-select {
+  width: 80px !important;
+  height: 80px !important;
+}
+.ant-picker-dropdown .ant-picker-time-panel-column{
+  overflow-y: scroll !important;
+  width: 80px !important;
+  font-size: 16px !important;
+}
+.ant-picker-dropdown .ant-picker-time-panel-column>li.ant-picker-time-panel-cell-disabled .ant-picker-time-panel-cell-inner{
+  color: #ff010166;
+}
+.ant-picker-dropdown .ant-picker-time-panel-column>li{
+  padding: 2px 0 !important;
+}
+.ant-picker-time-panel >.ant-picker-content{
+  height: 40vh !important;
+}
+
+.ant-picker .ant-picker-outlined{
+  pointer-events: none;
+}
+
+.ant-picker-outlined:focus-within{
+  background-color: #27292d;
+}
+/* dark-theme.css */
+
+/* Dark background color for the modal overlay */
+.ant-modal-root {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+}
+
+/* Dark background color for the modal */
+.ant-modal {
+  background-color: #1f1f1f;
+}
+
+/* Light text color for modal content */
+.ant-modal-body {
+  color: #ffffff;
+}
+
+/* Dark background color for modal header */
+.ant-modal-header {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* Dark background color for modal footer */
+.ant-modal-footer {
+  background-color: #1f1f1f;
+  border-top: 1px solid #e9e9e9;
+  padding-top: 5px;
+}
+.attribute input:checked+label {
+  border-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Customize other modal elements as needed */
+/* ... */
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.like-button {
+  display: inline-block;
+}
+
+.like-icon {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.like-icon.liked {
+  animation: heartbeat 0.8s ease-in-out;
+}
+
+/* PortPolio Section Gallery icon svg style */
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+/* Remove Number Input arrows  */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+/* Input Radio type focus issue */
+[type='checkbox']:focus, [type='radio']:focus{
+      outline: none;
+  --tw-ring-offset-width:0px;
+        outline-offset: 0px; 
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-shadow:0px;
+    --tw-ring-shadow: 0;
+}
+*:focus-visible{
+  outline: none !important;
+}
+
+.home_swiper_slide{
+  height: 300px !important;
+}

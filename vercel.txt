@@ -1,0 +1,17 @@
+
+vercel deployement
+====================
+
+npm install -g vercel
+
+vercel login
+
+vercel pull
+
+vercel build
+
+vercel --prebuilt
+
+go to vercel and click on ... and then click on promote to production
+
+npm i @react-oauth/google
